@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/laptop.css" />
+    <link rel="stylesheet" href="./css/mobile.css" />
+    <link rel="stylesheet" href="./css/table.css" />
+    <link rel="stylesheet" href="./css/font.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <title>Assignment 03</title>
+  </head>
+  <body>
+    <!--phần Banner -->
+    <div id="banner" class="banner">
+      <!-- Hình ảnh banner -->
+      <!-- <img src="images/banner.jpg" class="img-banner" /> -->
+      <!-- Phần văn bản trong banner -->
+      <div class="banner-text">
+        <!-- Tiêu đề lớn với font size 2.5 và in đậm -->
+        <h1 class="fs-2.5 fw-bold mb-0">Lê Văn việt</h1>
+        <!-- Chức danh Full Stack Developer -->
+        <span class="random">Full Stack Developer</span>
+      </div>
+    </div>
+
+    <!--phần NAVBAR -->
+    <!-- Thẻ dẫn hướng -->
+    <nav class="container nav mw-100 pe-0">
+      <!-- Menu thanh điều hướng -->
+      <div class="nav-bar">
+        <!-- Đường dẫn và biểu tượng Thông tin -->
+        <a href="digital-cv.html" class="link link-same">
+          <span class="icon1">
+            <td><i class="icon-user"></i></td> </span
+          >Thông tin</a
+        >
+        <!-- Đường dẫn và biểu tượng Lý lịch -->
+        <a href="digital-cv.html" class="link link-same"
+          ><span class="icon1"
+            ><td><i class="icon-doc-text-inv"></i></td
+          ></span>
+          Lý lịch</a
+        >
+        <!-- Phần tên và chức danh -->
+        <div class="name-stack link-same">
+          <!-- <a href="#" class="name-stack1 a">Nguyễn Văn A</a>
+            <a href="#" class="name-stack1 b">Full Stack Developer</a> -->
+        </div>
+        <!-- Đường dẫn và biểu tượng Chứng chỉ -->
+        <a href="digital-cv.html" class="link link-same"
+          ><span class="icon1"
+            ><td><i class="icon-mail-alt"></i></td
+          ></span>
+          Chứng chỉ</a
+        >
+        <!-- Đường dẫn và biểu tượng Dự Án -->
+        <a href="digital-cv.html" class="link link-same">
+          <span class="icon1">
+            <td><i class="icon-star-1"></i></td
+          ></span>
+          Dự Án</a
+        >
+      </div>
+    </nav>
+
+    <!-- GOAL AND INFORMATION -->
+    <!-- Phần MỤC TIÊU VÀ THÔNG TIN -->
+    <section id="about" class="bg-grey">
+      <!-- Container chứa mục tiêu và thông tin -->
+      <!-- điều chỉnh padding, margin-right,margin-left và width theo tỷ lệ-->
+      <div class="container goal-information p-0 me-0 ms-0 mw-100">
+        <!-- Phần Mục tiêu nghề nghiệp -->
+        <!-- Đặt màu nền của phần tử là màu xám (grey),padding-left,padding-right của phần tử là 4 -->
+        <div id="target" class="target bg-grey ps-4 pe-4">
+          <!-- Đặt kích thước font của phần tử là 4,chữ sẽ hiện thị đậm-->
+          <h1 class="title fs-4 fw-bold">Mục tiêu nghề nghiệp</h1>
+          <!--độ đậm của font chữ là 900-->
+          <!--Đặt giá trị margin-bottom của phần tử là 0-->
+          <p class="text fw-900 mb-0">
+            Là một sinh viên đã hoàn thành chương trình chứng chỉ Doanh Nghiệp
+            của FUNiX. Em mong muốn mình sẽ được làm việc với vị trí Fullstack
+            Developer, có thể vận dụng những kiến thức đã được trau dồi và không
+            ngừng học hỏi để phát triển bản thân, cũng như hoàn thành tốt nhất
+            công việc được giao.
+          </p>
+        </div>
+        <!-- Phần Thông tin cá nhân -->
+        <div id="personal-info" class="information">
+          <img src="images/IMG_2853.JPG" class="img-navbar" />
+          <!-- Đặt kích thước font của phần tử là 4,chữ sẽ hiện thị đậm-->
+          <h1 class="title fs-4 fw-bold">Thông tin cá nhân</h1>
+          <!-- Form nhập email -->
+          <form id="emailForm">
+            <!--Đây là ô input cho người dùng nhập email.-->
+            <!--Loại input là email, điều này sẽ giúp trình duyệt kiểm tra xem email được nhập có đúng định dạng không.-->
+            <!--Xác định một ID cho ô input để có thể tham chiếu đến nó từ các phần khác của trang hoặc từ mã JavaScript.-->
+            <!--Hiển thị một đoạn gợi ý trong ô input để hướng dẫn người dùng.-->
+            <!--Áp dụng hai lớp CSS vào ô input. Lớp email có thể được sử dụng để tùy chỉnh kiểu dáng của ô input, lớp d-block có thể làm cho ô input hiển thị ở chế độ block (mỗi ô input ở một dòng).-->
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter email"
+              class="email d-block"
+              ;
+            />
+            <!--nhãn được tạo để mô tả ô input để người dùng biết nơi nhập dữ liệu.
+            -->
+            <label for="email" class="descript-email"
+              >Hãy nhập email để xác thực</label
+            >
+            <!--tạo một nút gửi để gửi dữ liệu biểu mẫu khi được nhấn-->
+            <input type="submit" class="button-submit" />
+          </form>
+          <!-- Information -->
+          <!--tạo một danh sách không thứ tự (unordered list) chứa thông tin cá nhân.-->
+          <!--margin-top là 40px,margin-left là 0,margin-bottom là 0,lớp hidden có thể là để ẩn phần tử này ban đầu khi tải trang-->
+          <ul class="mt-40 info ps-0 mb-0 hidden">
+            <li class="list1 mb-0">
+              Giới tính<span class="detail">: Nam</span>
+            </li>
+            <li class="list1 mb-0">
+              Ngày sinh<span class="detail"> : 15/10/1994</span>
+            </li>
+            <li class="list1 mb-0">
+              Điện thoại<span class="detail"> : (+81)08042059999 </span>
+            </li>
+            <li class="list1 mb-0">
+              Email<span class="detail"> :vietlvfx44655@funix.edu.vn</span>
+            </li>
+            <li class="list1 mb-0">
+              Địa chỉ<span class="detail"> : Shiga-Nhật Bản</span>
+            </li>
+            <li class="list1 mb-2">
+              Website<span class="detail"> : https://abc.tech</span>
+            </li>
+            <!--Các icon-->
+            <li class="icon2">
+              <td><i class="icon-twitter"></i></td>
+              <td><i class="icon-facebook"></i></td>
+              <td><i class="icon-gplus"></i></td>
+              <td><i class="icon-linkedin"></i></td>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- PROPERTY -->
+
+    <section id="job-info">
+      <!-- lớp CSS được sử dụng để điều chỉnh margins (ms, me), paddings (ps, pe), và maxWidth (mw) của phần container này-->
+      <div class="container property ms-0 me-0 ps-0 pe-0 mw-100">
+        <div class="container-property1">
+          <div class="container-view" id="container-information-job1">
+            <div class="title1">
+              <!-- Đặt kích thước font của phần tử là 5,chữ sẽ hiện thị đậm-->
+              <h1 class="fs-5 fw-bold head1">Kinh nghiệm</h1>
+              <!-- View more -->
+              <button class="view-more">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="8"
+                  height="8"
+                  fill="currentColor"
+                  class="bi bi-caret-down-fill icon-view"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"
+                  />
+                </svg>
+                <span style="margin-left: 5px">VIEW MORE</span>
+              </button>
+              <!-- View less -->
+              <button class="view-less hidden" id="view-less">
+                <!--được sử dụng để chứa hình ảnh vector (icon) của mũi tên "caret-up-fill".-->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="8"
+                  height="8"
+                  fill="currentColor"
+                  class="bi bi-caret-up-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"
+                  />
+                </svg>
+               <span style="margin-left: 5px">VIEW LESS</span>
+              </button>
+            </div>
+            <div class="icon3">
+              <td><i class="ic-toolbox"></i></td>
+            </div>
+
+            <!-- content chứa thông tin về kinh nghiệm làm việc. -->
+            <div class="content1 hidden">
+             <!-- Mỗi chi tiết kinh nghiệm sẽ được đặt trong một phần tử có lớp "list2".-->
+              <div class="list2">
+                <div class="label">Full Stack Developer - Công ty Niteco</div>
+                <!-- Chứa nội dung cụ thể về kinh nghiệm, có thể bao gồm thông tin về thời gian làm việc và nhiệm vụ đã thực hiện.-->
+                <div class="content-small">
+                  <!--Thời gian làm việc tại cụ thể công ty, có thể bao gồm cả thời gian bắt đầu và kết thúc.-->
+                  <span class="time"
+                    >05/2022-<span class="time-present">Hiện tại</span></span
+                  >
+                  <p>
+                    - Xây dựng, phát triển Website dựa trên thiết kế và yêu cầu
+                    đã có.<br />
+                    - Phân tích và thiết kế Database, sử dụng các hệ quản trị
+                    CSDL (MySQL,SQLServer,NoSQL,...) va viết được các câu truy
+                    vấn.<br />
+                    - Sử dụng ngôn ngữ server-side (Python,Java,...) để xây dựng
+                    các Web Service
+                  </p>
+                </div>
+              </div>
+<!-- Mỗi chi tiết kinh nghiệm sẽ được đặt trong một phần tử có lớp "list2".-->
+              <div class="list2">
+                <div class="label">Web Designer - Công ty TNHH HOANG LONG</div>
+                <!-- Chứa nội dung cụ thể về kinh nghiệm, có thể bao gồm thông tin về thời gian làm việc và nhiệm vụ đã thực hiện.-->
+                <div class="content-small">
+                 <!--Thời gian làm việc tại cụ thể công ty, có thể bao gồm cả thời gian bắt đầu và kết thúc.-->
+                  <span class="time">06/2021-04/2022</span>
+                  <p>
+                    -Thiết kế Website dự trên yêu cầu của khách hàng <br />
+                    -Sử dụng các công cụ:Figma,Canva,PTS.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container-view" id="container-information-job1">
+            <div class="title1">
+              <h1 class="fs-5 fw-bold head1">Học vấn</h1>
+              <!-- View more -->
+              <button class="view-more">
+<!--được sử dụng để chứa hình ảnh vector (icon) của mũi tên "caret-down-fill".-->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="8"
+                  height="8"
+                  fill="currentColor"
+                  class="bi bi-caret-down-fill icon-view"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"
+                  />
+                </svg>
+                <span style="margin-left: 5px">VIEW MORE
+              </button>
+              <!-- View less -->
+              <button class="view-less hidden" id="view-less">
+                <!--được sử dụng để chứa hình ảnh vector (icon) của mũi tên "caret-up-fill".-->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="8"
+                  height="8"
+                  fill="currentColor"
+                  class="bi bi-caret-up-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"
+                  />
+                </svg>
+                <span style="margin-left: 5px">VIEW LESS</span>
+              </button>
+            </div>
+            <div class="icon3">
+              <td><i class="ic-pencil"></i></td>
+            </div>
+            <div class="content1 hidden">
+              <!-- Mỗi chi tiết bằng cấp,chứng chỉ sẽ được đặt trong một phần tử có lớp "list2".-->
+              <div class="list2">
+                <div class="label">FUNIX</div>
+                 <!-- Chứa nội dung cụ thể về bằng cấp chứng chỉ, có thể bao gồm thông tin về thời gian Đã học chứng chỉ .-->
+                <div class="content-small">
+                 <!--chứa nội dung cụ thể về thời gian đã học chứng chỉ-->
+                  <span class="time">06/2022-05/2023</span>
+                  <p>
+                    -Tốt nghiệp chứng chỉ doanh nghiệp nhánh Fullstack<br />
+                    -GPA:9/10
+                  </p>
+                </div>
+              </div>
+              <!-- Mỗi chi tiết bằng cấp,chứng chỉ sẽ được đặt trong một phần tử có lớp "list2".-->
+              <div class="list2">
+                <div class="label">
+                  Cử nhân-ĐH Công nghệ thông tin-Đại học Đà Nẵng
+                </div>
+                <!-- Chứa nội dung cụ thể về bằng cấp chứng chỉ, có thể bao gồm thông tin về thời gian Đã học chứng chỉ .-->
+                <div class="content-small">
+                  <!--chứa nội dung cụ thể về thời gian đã học chứng chỉ-->
+                  <span class="time">08/2016-07/2019</span>
+                  <p>
+                    -Chuyên ngành:Công nghệ thông tin<br />
+                    -GPA:3.5/4
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container-view" id="container-information-job1">
+            <div class="title1">
+              <!-- Đặt kích thước font của phần tử là 5,chữ sẽ hiện thị đậm-->
+              <h1 class="fs-5 fw-bold head1">Hoạt động</h1>
+              <!-- View more -->
+              <button class="view-more">
+<!--được sử dụng để chứa hình ảnh vector (icon) của mũi tên "caret-down-fill".-->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="8"
+                  height="8"
+                  fill="currentColor"
+                  class="bi bi-caret-down-fill icon-view"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"
+                  />
+                </svg>
+                <span style="margin-left: 5px">VIEW MORE</span>
+              </button>
+              <!-- View less -->
+              <button class="view-less hidden" id="view-less">
+                <!--được sử dụng để chứa hình ảnh vector (icon) của mũi tên "caret-up-fill".-->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="8"
+                  height="8"
+                  fill="currentColor"
+                  class="bi bi-caret-up-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"
+                  />
+                </svg>
+                <span style="margin-left: 5px">VIEW LESS</span>
+              </button>
+            </div>
+            <div class="icon3">
+              <td><i class="ic-toolbox"></i></td>
+            </div>
+            <div class="content1 hidden">
+              <div class="list2">
+                <div class="label">Cuộc thi về CNTT 2019</div>
+               <!--thời gian và các giải thưởng đã đạt được-->
+                <div class="content-small">
+                  <!--thời gian cụ thể nhận giải thưởng-->
+                  <span class="time">03/2019-05/2019</span>
+
+                  <p>
+                    -Giải 2 bảng B<br />
+                    -Đề tài: Trang web về Tìm kiếm phòng trọ trên địa bàn đà
+                    nẵng.
+                  </p>
+                </div>
+              </div>
+              <div class="list2">
+                <div class="label">Câu lạc bộ Kỹ thuật CNTT-ĐÀ NẴNG</div>
+                 <!--thời gian và các giải thưởng đã đạt được-->
+                <div class="content-small">
+                    <!--thời gian cụ thể nhận giải thưởng-->
+                  <span class="time">08/2016-08/2017</span>
+                  <p>-Trưởng ban chuyên môn</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-property2">
+          <div class="container-view" id="container-information-job2">
+            <div class="title1">
+              <h1 class="fs-5 fw-bold head1">Sở thích</h1>
+              <!-- View more -->
+              <button class="view-more">
+                <!--được sử dụng để chứa hình ảnh vector (icon) của mũi tên "caret-down-fill".-->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="8"
+                  height="8"
+                  fill="currentColor"
+                  class="bi bi-caret-down-fill icon-view"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"
+                  />
+                </svg>
+                <span style="margin-left: 5px">VIEW MORE</span>
+              </button>
+              <!-- View less -->
+              <button class="view-less hidden" id="view-less">
+                <!--được sử dụng để chứa hình ảnh vector (icon) của mũi tên "caret-up-fill".-->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="8"
+                  height="8"
+                  fill="currentColor"
+                  class="bi bi-caret-up-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"
+                  />
+                </svg>
+                <span style="margin-left: 5px">VIEW LESS</span>
+              </button>
+            </div>
+            <!--Các icon tương ứng với âm nhạc,chơi game,du lịch, nấu ăn-->
+            <div class="icon3">
+              <td><i class="ic-telescope"></i></td>
+            </div>
+            <div class="content2 hidden">
+              <div class="container-icon-hobby">
+                <div class="icon-hobby">
+                  <td><i class="ic-megaphone"></i></td>
+                </div>
+                <div class="icon-hobby">
+                  <td><i class="ic-strategy"></i></td>
+                </div>
+                <div class="icon-hobby">
+                  <td><i class="ic-hotairballoon"></i></td>
+                </div>
+                <div class="icon-hobby">
+                  <td><i class="ic-basket"></i></td>
+                </div>
+              </div>
+
+              <div class="text1">
+                <span class="text-hobby">Âm nhạc</span>
+                <span class="text-hobby">Chơi game</span>
+                <span class="text-hobby">Du lịch</span>
+                <span class="text-hobby">Nấu ăn</span>
+              </div>
+            </div>
+          </div>
+          <div class="container-view" id="container-information-job2">
+            <div class="title1">
+              <!-- Đặt kích thước font của phần tử là 5,chữ sẽ hiện thị đậm-->
+              <h1 class="fs-5 fw-bold head1">Ngôn ngữ</h1>
+              <!-- View more -->
+              <button class="view-more">
+                <!--được sử dụng để chứa hình ảnh vector (icon) của mũi tên "caret-down-fill".-->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="8"
+                  height="8"
+                  fill="currentColor"
+                  class="bi bi-caret-down-fill icon-view"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"
+                  />
+                </svg>
+                <span style="margin-left: 5px">VIEW MORE</span>
+              </button>
+              <!-- View less -->
+              <button class="view-less hidden" id="view-less">
+                <!--được sử dụng để chứa hình ảnh vector (icon) của mũi tên "caret-up-fill".-->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="8"
+                  height="8"
+                  fill="currentColor"
+                  class="bi bi-caret-up-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"
+                  />
+                </svg>
+                <span style="margin-left: 5px">VIEW LESS</span>
+              </button>
+            </div>
+            <div class="icon3">
+              <td><i class="ic-mic"></i></td>
+            </div>
+            <!--trình độ và chứng chỉ ngoại ngữ-->
+            <div class="content3 hidden">
+              <div>Tiếng Anh - IELTS 8.0</div>
+              <div>
+                <span class="border-blue border-0"></span>
+                <span class="border-blue border-0"></span>
+                <span class="border border-0"></span>
+              </div>
+              <div>Tiếng Nhật - JLPT N1</div>
+              <div>
+                <span class="border-blue border-0"></span>
+                <span class="border-blue border-0"></span>
+                <span class="border-blue border-0"></span>
+              </div>
+            </div>
+          </div>
+          <div class="container-view" id="container-information-job2">
+            <div class="title1">
+              <h1 class="fs-5 fw-bold head1">Kỹ năng</h1>
+              <!-- View more -->
+              <button class="view-more">
+                <!--được sử dụng để chứa hình ảnh vector (icon) của mũi tên "caret-down-fill".-->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="8"
+                  height="8"
+                  fill="currentColor"
+                  class="bi bi-caret-down-fill icon-view"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"
+                  />
+                </svg>
+                <span style="margin-left: 5px">VIEW MORE</span>
+              </button>
+              <!-- View less -->
+              <button class="view-less hidden" id="view-less">
+                <!--được sử dụng để chứa hình ảnh vector (icon) của mũi tên "caret-up-fill".-->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="8"
+                  height="8"
+                  fill="currentColor"
+                  class="bi bi-caret-up-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"
+                  />
+                </svg>
+                <span style="margin-left: 5px">VIEW LESS</span>
+              </button>
+            </div>
+            <div class="icon3">
+              <td><i class="ic-tools-2"></i></td>
+            </div>
+            <!--Các kỹ năng ngôn ngữ lập trình-->
+            <div class="content3 hidden">
+              <div>HTML/CSS:Fundamental</div>
+              <div>
+                <span class="border-blue border-0"></span>
+                <span class="border-blue border-0"></span>
+                <span class="border border-0"></span>
+              </div>
+              <div>Javascript:Intermediate</div>
+              <div>
+                <span class="border-blue border-0"></span>
+                <span class="border-blue border-0"></span>
+                <span class="border border-0"></span>
+              </div>
+              <div>NodeJS:Intermediate</div>
+              <div>
+                <span class="border-blue border-0"></span>
+                <span class="border border-0"></span>
+                <span class="border border-0"></span>
+              </div>
+              <div>Bootstrap5:Fundamental</div>
+              <div>
+                <span class="border-blue border-0"></span>
+                <span class="border border-0"></span>
+                <span class="border border-0"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATE -->
+<!--tạo một ID và lớp css có màu nền là màu xám-->
+    <section id="certificate" class="bg-grey">
+     <!--phần chứa nội dung về các chứng chỉ và giải thưởng--> 
+      <div class="container3">
+        <div class="certificate-title">
+          <!-- các lớp css và id được gán cho phần tử h1 và có định dạng font size là 5,định dạng chữ in đậm, và có margin-bottom là 0-->
+          <h1 class="section-title fs-5 fw-bold mb-0" id="certificate-title">
+            Chứng chỉ - Giải thưởng
+          </h1>
+        </div>
+<!--lớp có định dạng font-size là 6-->
+        <div class="certificate-image fs-6">
+          <img src="images/Cert_WEB.png" class="img-certificate" />
+          <div class="certificate-text">
+            <!-- lớp có margin-bottom là 0 và pading-bottom là 0-->
+            <p class="detail1 mb-0 pb-0">CHỨNG CHỈ LẬP TRÌNH WEB-FUNIX</p>
+            <!--margin-bottom là 1-->
+            <p class="detail2 mb-1">
+              - Chứng chỉ thuộc chương trình CCDN<br />
+              - GPA:8.6
+            </p>
+          </div>
+        </div>
+        <!--tương tự như phần trên-->
+        <div class="certificate-image">
+          <img src="images/Cert_PRF.png" class="img-certificate" />
+          <div class="certificate-text">
+            <p class="detail1 mb-0">CHỨNG CHỈ LẬP TRÌNH JAVASCRIPT</p>
+            <p class="detail2">
+              - Chứng chỉ thuộc chương trình CCDN<br />
+              - GPA:8.9
+            </p>
+          </div>
+        </div>
+        <div class="certificate-image">
+          <img
+            src="images/Cert_DBI.png"
+            class="img-certificate"
+            id="img-certificate"
+          />
+          <div class="certificate-text">
+            <p class="detail1 mb-0">CHỨNG CHỈ THIẾT KẾ DATABASE-FUNIX</p>
+            <p class="detail2">
+              - Chứng chỉ thuộc chương trình CCDN<br />
+              - GPA:8.0
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECT -->
+<!--Phần đánh dấu về dự án trên trang web.-->
+    <section id="project">
+      <!--Phần chứa nội dung về dự án với cách định dạng và kích thước cụ thể.-->
+      <div class="container container4 p-0 ms-0 me-0 mw-100">
+           <!--Tiêu đề "Dự án" với cỡ chữ và kiểu hiển thị cụ thể.-->
+        <h1 class="section-title DUAN fs-4">Dự án</h1>
+           <!-- Phần chứa thông tin và chi tiết về dự án.-->
+        <div class="project-container">
+                    <!--lớp chứa thông tin về một dự án cụ thể.--> 
+          <div class="project">
+                       <!--Liên kết tới trang digital-cv.html.-->
+            <a href="digital-cv.html">
+                         <!--Hình ảnh của dự án.-->
+              <img src="images/project_1.png" class="img-project" />
+            </a>
+                       <!--Tiêu đề của dự án.-->
+            <div class="title-project">CV CÁ NHÂN</div>
+                       <!--Phần chứa các thông tin khác về dự án.-->
+            <div class="decoration">
+                         <!--Năm thực hiện dự án.-->
+              <span class="time-project">2023</span>
+                         <!--Phần chứa icon.-->
+              <span class="span-icon">
+                           <!-- Icon của user-->
+                <td><i class="icon-user-1"></i></td>
+              </span>
+              FUNIX
+                         <!--Phần chứa thông tin về Developer.-->
+              <div class="icon-developer">
+                       <!--   Phần chứa icon -->
+                <span class="span-icon">
+                        <!--    Icon của lamp. -->
+                  <td><i class="icon-lamp"></i></td>
+                </span>
+                Developer
+              </div>
+            </div>
+       <!-- Bảng chứa thông tin chi tiết về dự án.-->
+            <table>
+                  <!--   Dòng trong bảng    -->
+              <tr>
+                          <!--  Ô chứa tiêu đề "Mô tả".-->
+                <td class="unknown">Mô tả</td>
+                          <!--Ô chứa thông tin mô tả về dự án.--> 
+                <td class="bor">
+                  Trang Web CV cá nhân online.Gồm các thông tin cá nhân cũng như
+                  kỹ năng nghề nghiệp
+                </td>
+              </tr>
+              <tr>
+                  <!--  Ô chứa tiêu đề "Nhiệm Vụ".-->
+                <td class="unknown">Nhiệm vụ</td>
+   <!--                Ô chứa thông tin về nhiệm vụ của dự án.        -->
+                <td class="bor">
+                  - Phát triển code - Review code - Tối ưu code - Xử lý lỗi
+                </td>
+              </tr>
+              <tr>
+                <!--  Ô chứa tiêu đề "Công nghệ".-->
+                <td class="unknown pb-4">Công nghệ</td>
+              <!--ô chứa thông tin về công nghệ-->
+                <td class="bor">- HTML, CSS</td>
+              </tr>
+            </table>
+          </div>
+          <!--Phần này các chức năng và chú thích cũng tương tự như phần CV cá nhân-->
+          <div class="project">
+            <a href="digital-cv.html">
+              <img src="images/project_2.png" class="img-project" />
+            </a>
+            <div class="title-project">TRANG WEB QUẢN LÍ THÚ CƯNG</div>
+            <div class="decoration">
+              <span class="time-project">2023</span>
+
+              <span class="span-icon">
+                <td><i class="icon-user-1"></i></td>
+              </span>
+              FUNIX
+              <div class="icon-developer">
+                <span class="span-icon">
+                  <td><i class="icon-lamp"></i></td>
+                </span>
+                Developer
+              </div>
+            </div>
+            <table>
+              <tr>
+                <td class="unknown">Mô tả</td>
+                <td class="bor">
+                  Ứng dụng giúp quản lý các thông tin của thú cưng như: Cân
+                  nặng, giống, tình trạng tiêm chủng, ...Bao gồm các chức năng
+                  thêm/ sửa/ xóa
+                </td>
+              </tr>
+              <tr>
+                <td class="unknown">Nhiệm vụ</td>
+                <td class="bor">
+                  - Phát triển code - Review code - Tối ưu code - Xử lý lỗi
+                </td>
+              </tr>
+              <tr>
+                <td class="unknown">Công nghệ</td>
+                <td class="pb-2">-HTML, CSS, Javascript</td>
+              </tr>
+            </table>
+          </div>
+          <!--Phần này các chức năng và chú thích cũng tương tự như phần CV cá nhân-->
+          <div class="project">
+            <a href="digital-cv.html">
+              <img src="images/project_3.png" class="img-project" />
+            </a>
+
+            <div class="title-project">TRANG WEB TIN TỨC</div>
+            <div class="decoration">
+              <span class="time-project">2023</span>
+              <span class="span-icon">
+                <td><i class="icon-user-1"></i></td>
+              </span>
+              FUNIX
+              <div class="icon-developer">
+                <span class="span-icon">
+                  <td><i class="icon-lamp"></i></td>
+                </span>
+                Developer
+              </div>
+            </div>
+            <table>
+              <tr>
+                <td class="unknown">Mô tả</td>
+                <td class="bor">
+                  Trang Web xem tin tức từ nhiều nguồn khác nhau, người dùng có
+                  thể tìm kiếm các tin tức dựa theo các từ khóa.
+                </td>
+              </tr>
+              <tr>
+                <td class="unknown">Nhiệm vụ</td>
+                <td class="bor">
+                  - Phát triển code - Review code - Tối ưu code - Xử lý lỗi
+                </td>
+              </tr>
+              <tr>
+                <td class="unknown pb-4">Công nghệ</td>
+                <td class="bor">-HTML, CSS, Javascript</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--FOOTER-->
+
+    <footer>
+      <!--tại Id và lớp có màu nền là màu xám-->
+      <section id="footer" class="bg-grey">
+      <!--tạo lớp và thiết lập padding và margin bằng 0 và chiều dài tối đa 100%-->
+        <div class="container container5 p-0 m-0 mw-100">
+                <!--    Danh sách chứa các liên kết mạng xã hội. -->
+          <ul class="list-footer">
+            <li>           <!--Mỗi li là một mục trong danh sách, chứa một liên kết mạng xã hội.-->
+                         <!--Liên kết tới Facebook với class để định dạng (link-footer) và mở ra tab mới (target="_blank").-->
+              <a
+                href="https://www.facebook.com/vanviet.le.3597/"
+                class="link-footer"
+                target="_blank"
+              >
+                <td><i class="icon-facebook-circled icon-footer"></i></td>
+                Facebook
+              </a>
+            </li>
+            <li>
+              <!--Liên kết tới linkedin với class để định dạng (link-footer) và mở ra tab mới (target="_blank").-->
+              <a
+                href="https://www.linkedin.com/feed/"
+                class="link-footer"
+                target="_blank"
+              >
+                <td><i class="icon-linkedin-circled icon-footer"></i></td>
+                Linkedin
+              </a>
+            </li>
+            <li>
+              <!--Liên kết tới github với class để định dạng (link-footer) và mở ra tab mới (target="_blank").-->
+              <a
+                href="https://github.com/levanviet1994/hocnuahocmai"
+                class="link-footer"
+                target="_blank"
+              >
+                <td><i class="icon-github-circled icon-footer"></i></td>
+                Github
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </footer>
+          <!--    Link tới file JavaScript của Bootstrap để sử dụng các tính năng cần thiết. -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+          <!--    Link tới file JavaScript tên javascript.js để sử dụng các hàm và tương tác tùy chỉnh. -->
+    <script src="javascript.js"></script>
+  </body>
+</html>

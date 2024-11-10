@@ -1,0 +1,38 @@
+@media only screen and (max-width: 992px) {
+  /* CSS cho tablet */
+  /*ẩn lớp img-navbar*/
+  .img-navbar {
+    display: none;
+  }
+  /*ẩn lớp nam-stack*/
+  .name-stack {
+    display: none;
+  }
+  /*chia 2 cột 1 dòng */
+  .property {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+  /*định dạng xếp chồng lên nhau,căn giữa trục dọc ở vị trí cuối,chiếu 1/2 columm*/
+  .container-property1 {
+    flex-direction: column;
+    align-items: end;
+    grid-column: 1/2;
+  }
+  /*định dạng xếp chồng lên nhau,căn giữa trục dọc ở vị trí đầu,chiếu 2/3 columm*/
+  .container-property2 {
+    flex-direction: column;
+    align-items: start;
+    grid-column: 2/3;
+  }
+  /*đặt chiều rộng 60%*/
+  #container-information-job1,
+  #container-information-job2 {
+    width: 60%;
+  }
+  /*sử dụng grid layout chia 2 cột */
+  tr {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+  }
+}

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+            body {
+              font-family: Arial, sans-serif;/* Thiết lập font chữ cho body là Arial hoặc font sans-serif */
+              display: flex;/* Sử dụng flexbox layout */
+              justify-content: center;/* Căn giữa theo chiều ngang */
+              background-color: #f3f3f3;/* Màu nền của body */
+              padding: 20px; /* Padding cho body */
+              margin: 0; /* Loại bỏ margin mặc định */
+            }
+            .container {
+              display: grid;/* Sử dụng grid layout */
+              grid-template-columns: 2fr 1fr 1fr;/* Chia thành 3 cột với tỷ lệ 2:1:1 */
+              grid-template-rows: 1fr 1fr;/* Chia thành 2 dòng bằng nhau */
+              gap: 0px;/* Khoảng cách giữa các phần tử con */
+              max-width: 1200px;/* Độ rộng tối đa */
+              width: 100%;/* Độ rộng 100% */
+              background-color: #e9f3f7;/* Màu nền của container */
+              padding: 20px; /* Padding cho container */
+            }
+        /* Thiết lập border cho một số section */
+            .section-goals,
+            .section-team,
+            .section-timeline,
+            .section-scopes,
+            .section-primary {
+              border: 8px solid blue;
+            }
+
+            .section-timeline {
+              grid-column: 3/4;/* Chỉ định cột grid từ cột 3 đến 4 */
+              grid-row: 1/3;/* Chỉ định dòng grid từ dòng 1 đến 3 */
+            }
+            h2 {
+              color: blue;/* Màu chữ là màu xanh lam */
+              font-size: 20px;/* Kích thước font chữ là 20px */
+              margin-bottom: 10px;/* Margin phía dưới là 10px */
+            }
+            /* Thiết lập hiển thị và trang trí cho từng mục trong các section */
+            .section-goals .goal, .section-scopes .scope, .section-primary .primary-item, .section-team .member, .section-timeline .project {
+                    display: flex;/* Sử dụng flexbox layout */
+                    align-items: center; /* Căn phần tử con vào giữa theo trục dọc */
+                    margin-bottom: 10px; /* Margin phía dưới là 10px */
+                    font-size: 14px;/* Kích thước font chữ là 14px */
+                }
+    /* Thêm biểu tượng trước mỗi mục trong section */
+            .section-goals .goal::before {
+                    content: '⚑';/* Hiển thị biểu tượng ⚑ */
+                    margin-right: 10px;/* Margin phải là 10px */
+                    color: #333;/*Màu chữ*/
+                }
+                /* Các thiết lập biểu tượng trước mỗi mục khác */
+                .section-team .member::before {
+                    content: '👤';/* Hiển thị biểu tượng ⚑ */
+                    margin-right: 10px;/* Margin phải là 10px */
+                    color: #333;/*Màu chữ*/
+                }
+                .section-primary .primary-item::before {
+                    content: '❓';/* Hiển thị biểu tượng ❓ */
+                    background-color: #000; /* Màu nền là màu đen */
+                    border-radius: 50%;/* Bo tròn các góc ở độ cong 50% */
+                    margin-right: 10px; /* Margin phải là 10px */
+                ;
+                }
+                .section-timeline .project {
+                    display: flex; /* Sử dụng flexbox layout */
+                    align-items: center;/* Căn phần tử con vào giữa theo trục dọc */
+                }
+                .section-timeline .project-number {
+                    background-color: #8888ff;/* Màu nền */
+                    color: white;/* Màu chữ là trắng */
+                    font-weight: bold;/* Font chữ in đậm */
+                    font-size: 16px;/* Kích thước font chữ là 16px */
+                    width: 30px;/* Độ rộng là 30px */
+                    height: 30px;/* Chiều cao là 30px */
+                    border-radius: 50%;/* Bo tròn các góc ở độ cong 50% */
+                    display: flex;/* Sử dụng flexbox layout */
+                    align-items: center;/* Căn phần tử con vào giữa theo trục dọc */
+                    justify-content: center; /* Căn giữa theo chiều ngang */
+                    margin-right: 10px;/*margin phải là 10px*/
+                }
+
+                .scope-title{
+                  margin-bottom: 5px;/*margin  dưới 5px*/
+                  font-weight: bold;/* Font chữ in đậm */
+                }
+
+                .goal{
+                  border-bottom: 1px dashed black;/* Viền dưới 1px gạch ngang màu đen */
+
+                }
+
+                .project{
+                  border-bottom: 1px dashed rgb(42, 203, 214);/* Viền dưới 1px gạch ngang với màu RGB (42, 203, 214) */
+                }
+                @media only screen and (max-width: 576px) {
+                  .container{
+                  display: block; /* Hiển thị block thay vì flex khi màn hình nhỏ hơn hoặc bằng 576px */
+                 }
+                }
+
+                @media only screen and (max-width: 992px){
+                 .container{
+                  display: block; /* Hiển thị block thay vì grid khi màn hình nhỏ hơn hoặc bằng 576px */
+                 }
+                }
+            }
+  </style>
+  <body>
+    <div class="container">
+      <div class="section-goals">
+        <h2>Goals</h2>
+        <!-- Tiêu đề Goals -->
+        <hr />
+        <!-- Đường kẻ ngang -->
+        <div class="goal">
+          <strong>Goal 1</strong>: Xây dựng một ứng dụng di động dành cho việc
+          quản lý công việc cá nhân.
+        </div>
+        <div class="goal">
+          <strong>Goal 2</strong>: Tạo ra một giao diện dễ sử dụng và hiệu quả
+          để người dùng có thể tổ chức công việc cá nhân một cách hiệu quả.
+        </div>
+        <div class="goal">
+          <strong>Goal 3</strong>: Tăng năng suất và sắp xếp công việc một cách
+          có tổ chức hơn.
+        </div>
+      </div>
+      <div class="section-team">
+        <h2>Team</h2>
+        <!-- Tiêu đề Team -->
+        <hr />
+        <!-- Đường kẻ ngang -->
+        <!-- Thông tin về thành viên của nhóm -->
+        <div class="member"><strong>Member 01</strong> - Name: David</div>
+        <div class="member"><strong>Member 02</strong> - Name: jonni</div>
+        <div class="member"><strong>Member 03</strong> - Name: LeViet</div>
+        <div class="member"><strong>Member 04</strong> - Name: TuanTran</div>
+      </div>
+      <div class="section-timeline">
+        <h2>Timeline</h2>
+        <!-- Tiêu đề Timeline -->
+        <hr />
+        <!-- Đường kẻ ngang -->
+        <!-- Thời gian và công việc trong quá trình phát triển dự án -->
+        <div class="project">
+          <div class="project-number">01</div>
+          <div>Tuần 1: Hoàn thiện thiết kế giao diện người dùng</div>
+        </div>
+        <div class="project">
+          <div class="project-number">02</div>
+          <div>Tuần 2:Xác định các yêu cầu về trải nghiệm người dùng .</div>
+        </div>
+        <div class="project">
+          <div class="project-number">03</div>
+          <div>Tuần 3: Phát triển chức năng thêm mới công việc</div>
+        </div>
+        <div class="project">
+          <div class="project-number">04</div>
+          <div>Tuần 4:Cài đặt tính năng nhắc nhở công việc cho người dùng.</div>
+        </div>
+        <div class="project">
+          <div class="project-number">05</div>
+          <div>
+            Tuần 5:Tiến hành kiểm thử ứng dụng và phản hồi từ người dùng.
+          </div>
+        </div>
+        <div class="project">
+          <div class="project-number">06</div>
+          <div>
+            Tuần 6: triển khai ứng dụng trên cả hai nền tảng (iOS và Android).
+          </div>
+        </div>
+        <div class="project">
+          <div class="project-number">07</div>
+          <div>Tuần 7:Đào tạo người dùng về cách sử dụng ứng dụng.</div>
+        </div>
+      </div>
+      <div class="section-scopes">
+        <h2>Scopes</h2>
+        <!-- Tiêu đề Scopes-->
+        <hr />
+        <!-- Đường kẻ ngang -->
+        <!-- Phạm vi của dự án (IN và OUT) -->
+
+        <div class="scope">
+          <div class="scope1">
+            <div class="scope-title">IN</div>
+            Ứng dụng di động sẽ phát triển trên cả hai nền tảng iOS và Android.
+          </div>
+          <div class="scope2">
+            <div class="scope-title">OUT</div>
+            Nó sẽ kết nối với cơ sở dữ liệu trên đám mây để lưu trữ thông tin
+            công việc của người dùng.
+          </div>
+        </div>
+      </div>
+      <div class="section-primary">
+        <h2>Primary</h2>
+        <!-- Tiêu đề Primary -->
+        <hr />
+        <!-- Đường kẻ ngang -->
+
+        <div class="primary-item">
+          Hoàn thành thiết kế giao diện người dùng trước tuần thứ 2.
+        </div>
+        <div class="primary-item">
+          Phát triển chức năng thêm mới công việc và xem danh sách công việc
+          trước tuần thứ 3.
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

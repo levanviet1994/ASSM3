@@ -1,0 +1,848 @@
+/*Áp dụng cho tất cả các phần tử trong tài liệu
+ Đặt margin,padding của tất cả các phần tử thành 0px, 
+ Sử dụng box model theo chiều ngang (bao gồm padding và border trong kích thước).
+*/
+* {
+  margin: 0px;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*Chọn font chữ arial hoặc font chữ sans-serif cho toàn bộ văn bản trong body.
+Đặt kích thước chữ cho body là 16px
+*/
+body {
+  font-family: arial, sans-serif;
+  font-size: 16px;
+}
+/*Áp dụng cho các phần tử có class "bg-grey".
+Đặt màu nền của các phần tử có class "bg-grey" thành #f7f7f7.
+*/
+.bg-grey {
+  background: #f7f7f7;
+}
+
+/* section > .container {
+   width: 1170px;
+  margin: auto;
+  display: block;
+  padding: 30px 50px;   
+} */
+/* Áp dụng cho phần tử có id "nav-bar".
+ Căn giữa nội dung của phần tử có id "nav-bar".*/
+#nav-bar {
+  text-align: center;
+}
+
+/* Áp dụng cho các phần tử có class "banner".
+Đặt chiều rộng tự động và chiều cao của .banner là 50% chiều cao của màn hình
+Đặt vị trí của .banner là tương đối.
+Sử dụng thanh cuộn nếu nội dung vượt quá kích thước của .banner.
+ặt hình nền cho .banner với linear gradient và
+ hình ảnh background từ file banner.jpg.
+Thay đổi kích thước hình nền để nó phủ đầy phần tử .banner.
+ */
+.banner {
+  width: auto;
+  height: 50vh;
+  position: relative;
+  overflow: auto;
+  background-image: linear-gradient(
+      rgba(34, 34, 34, 0.6),
+      rgba(34, 34, 34, 0.6)
+    ),
+    url(../images/banner.jpg);
+  background-size: cover;
+}
+/* .img-banner {
+  width: 100%;
+  height: auto;
+  filter: brightness(50%); 
+}*/
+/*Áp dụng cho các phần tử có class "banner-text".
+Sử dụng flexbox để căn giữa nội dung và hiện thị theo hướng dọc.
+Đặt màu chữ là trắng và kích thước chữ là 20px.
+Đặt chiều cao của .banner-text là 100%.*/
+.banner-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 20px;
+  height: 100%;
+}
+/* Áp dụng cho các phần tử có class "random".
+Đặt kích thước chữ là 12px và độ mờ là 0.7 cho các phần tử có class "random".*/
+.random {
+  font-size: 12px;
+
+  opacity: 0.7;
+}
+/* NAVBAR */
+/*Áp dụng cho các phần tử có class "nav" và nav-bar".
+Đặt margin và padding của các phần tử có class "nav" thành 0.
+Đặt chiều rộng 100% và sử dụng flexbox để căn giữa nội dung của .nav-bar.
+
+*/
+.nav {
+  margin: 0;
+  padding: 0;
+}
+.nav-bar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* gap: 20px; */
+}
+/*Áp dụng cho tất cả các thẻ <a> bên trong thẻ <nav>.
+Hiển thị phần tử như một khối inline.
+Loại bỏ gạch chân dưới văn bản.
+Đặt màu chữ là đen.
+ Đặt chiều rộng là 100px.
+ padding phía trên là 18px.*/
+nav a {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  font-size: 11px;
+  /* padding: 0 10px; */
+  width: 100px;
+  padding-top: 18px;
+}
+/*Áp dụng cho phần tử có class "link".
+hiển thị phần tử như một khối inline.
+ Đặt chiều cao là 50px.
+ Căn giữa phần tử theo chiều dọc.
+: Căn giữa nội dung văn bản theo chiều ngang
+ */
+.link {
+  display: inline-block;
+  height: 50px;
+  align-self: center;
+  text-align: center;
+  /* padding: 15px 0px; */
+}
+/*Áp dụng cho phần tử có class "link-same".
+Đặt đường viền bên trái là 1px, màu đen, với độ mờ 0.1.
+Chọn phần tử cuối cùng có class "link-same" và đặt đường viền bên phải cho nó.
+*/
+.link-same {
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+.link-same:last-child {
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+/*Áp dụng cho phần tử có class "name-stack".
+Đặt chiều rộng là 30% chiều cao của viewport, chiều cao là 50px và hiển thị phần tử như một khối inline.
+*/
+.name-stack {
+  width: 30vh;
+  height: 50px;
+  display: inline-block;
+}
+/*Áp dụng cho phần tử có class "name-stack1".
+ Sử dụng flexbox, không chuyển đổi văn bản, đặt chiều rộng là 150px và hiển thị theo hướng dọc.
+*/
+.name-stack1 {
+  display: flex;
+  text-transform: none;
+  width: 150px;
+  flex-direction: column;
+}
+/*Áp dụng cho phần tử có class "a" hoặc "b"
+.a: Đặt kích thước chữ là 20px.
+.b: Đặt kích thước chữ là 10px, padding phía dưới là 10px và độ mờ là 0.5.
+
+*/
+.a {
+  font-size: 20px;
+}
+.b {
+  font-size: 10px;
+  padding-bottom: 10px;
+  opacity: 0.5;
+}
+/*Áp dụng cho phần tử có class "icon1" ".
+Đặt màu cho icon.*/
+.icon1 {
+  color: rgba(0, 140, 255, 0.949);
+}
+
+/* GOAL AND INFOMATION 
+Áp dụng cho phần tử có class "goal-information".
+đặt chiều rộng là 100%, kích thước chữ là 15px và chiều cao là 300px.
+ Sử dụng grid layout với 2 cột .
+*/
+.goal-information {
+  width: 100%;
+  font-size: 15px;
+  height: 300px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+/*p dụng cho các phần tử có class "target" 
+Định dạng layout grid với số hàng cố định và khoảng cách giữa các hàng.*/
+.target {
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  padding-left: 44px;
+  padding-right: 50px;
+  row-gap: 25px;
+}
+/* Áp dụng cho phần tử có class "text", "info" hoặc "detail".
+.text: Đặt kích thước chữ là 12px và độ mờ là 0.7.
+.info: Định dạng danh sách theo kiểu không có dấu.
+.detail: Đặt độ mờ là 0.6.
+*/
+.title {
+  align-self: end;
+}
+.text {
+  font-size: 12px !important  ;
+
+  opacity: 0.7;
+}
+/*.information: Định dạng layout grid với số hàng cố định và màu nền là xám nhạt.*/
+.information {
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  margin-top: 0;
+  background-color: #f7f7f7;
+  filter: brightness(97%);
+  padding-left: 44px;
+  row-gap: 30px;
+}
+/*Áp dụng cho phần tử có class "info".
+Loại bỏ việc hiển thị dấu đầu dòng cho danh sách.
+ Đặt kích thước chữ là 12px.
+*/
+.info {
+  list-style-type: none;
+  font-size: 12px;
+}
+/*Áp dụng cho phần tử có class "detail".
+Điều chỉnh độ mờ của phần tử là 0.6.
+*/
+.detail {
+  opacity: 0.6;
+}
+/*Áp dụng cho phần tử có class "list1".
+ Đặt khoảng cách dưới của phần từ là 5px.
+ 
+ Chọn phần tử thứ 6 của danh sách "list1" và đặt khoảng cách dưới là 15px.*/
+.list1 {
+  margin-bottom: 5px;
+}
+.list1:nth-child(6) {
+  margin-bottom: 15px;
+}
+/* Áp dụng cho phần tử có class "icon2".
+Đặt màu chữ cho phần tử.
+Thêm padding bên phải cho phần tử là 5px.
+*/
+.icon2 {
+  color: rgba(0, 140, 255, 0.949);
+  padding-right: 5px;
+}
+/*Áp dụng cho phần tử có class "hidden".
+Ẩn phần tử trên trình duyệt.
+*/
+.hidden {
+  display: none;
+}
+/*Áp dụng cho phần tử có class "container-email".
+Đặt khoảng cách dưới của phần tử là 20px.
+*/
+.container-email {
+  margin-bottom: 20px;
+}
+/* Áp dụng cho phần tử có class "email".
+Đặt chiều rộng là 95% của phần tử.
+Đặt padding cho phần tử 2px và padding bên trái là 6px.
+Đặt kích thước chữ là 13px.
+ Điều chỉnh độ mờ của phần tử là 0.7.
+*/
+.email {
+  width: 95%;
+  padding: 2px;
+  padding-left: 6px;
+  font-size: 13px;
+  opacity: 0.7;
+}
+/* Loại bỏ đường viền
+Điều chỉnh chiều cao của phần tử.
+ Đặt đường viền cho phần tử.
+ Điều chỉnh độ cong của góc.
+ Thêm hiệu ứng bóng đổ cho phần tử.
+ */
+.email:focus {
+  outline: none;
+  height: 27.34px;
+  border-top: 1px solid rgba(0, 140, 255, 0.949);
+  border-left: 1px solid rgba(0, 140, 255, 0.949);
+  border-right: 1px solid rgba(0, 140, 255, 0.949);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.521);
+  border-radius: 3px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.432);
+}
+/*đặt cỡ chữ 10px
+độ mờ là 0.6
+định dạng display kiểu block
+đặt margin  dưới là 15px*/
+.descript-email {
+  font-size: 10px;
+  opacity: 0.6;
+  display: block;
+  margin-bottom: 15px;
+}
+
+/*để thiết lập các thuộc tính như padding, font size, màu chữ, màu nền, border và border radius.*/
+.button-submit {
+  padding: 5px 7px;
+  font-size: 13px;
+  color: white;
+  background-color: rgb(10, 122, 207);
+  border: none;
+  border-radius: 3px;
+}
+
+/*khi di chuột qua button có class button-submit để thay đổi màu nền.*/
+.button-submit:hover {
+  background-color: rgb(12, 105, 175);
+}
+/*khi click chuột vào button có class button-submit.
+outline: Là một đoạn đường nét xung quanh phần tử.
+border: Đường viền khi click.
+border-radius: Độ cong của góc khi click.*/
+.button-submit:active {
+  outline: 2px solid rgba(0, 0, 0, 0.192);
+  border: 2px solid black;
+  border-radius: 3px;
+}
+/* PROPERTY */
+/* chọn font chữ cho phần tử
+sử dụng grid layout
+kích thước cột 100%、chiều cao tự động căn lề theo chiều ngang
+khảng cách giữa các phần tử là 20px
+khoảng cách trên,khoảng cách dưới*/
+.property {
+  font-family: open_sansregular;
+  display: grid;
+  /* grid-template-columns: repeat(3, 20%);  */
+  grid-template-columns: 100%;
+  grid-template-rows: auto auto; /*grid-template-rows: 450px 300px;*/
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+/* độ rộng của phần tử là 20%*/
+#container-information-job1 {
+  width: 20%;
+}
+/*độ rộng của phần tử 100% 
+chỉ định vị trí cột đầu tiên và cột cuối cùng,
+căn lề phần tử thứ nhất theo trục,sử dụng flexbõ ,căn giữ theo chiều ngang ,căn lề phần tử theo chiều dọc
+khoảng cách giữa các phần tử là 20px*/
+.container-property1 {
+  width: 100%;
+  grid-column: 1/-1;
+  align-self: start;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+}
+/*độ rộng của phần tử là 20% của chiều rộng phần tử cha */
+#container-information-job2 {
+  width: 20%;
+}
+/*độ rộng của phần tử là 100%
+chỉ định vị trí của cột đầu tiên và cột cuối cùng
+căn  lề phần tử theo trục dọc
+sử dụng flexbox 
+căn giữa theo chiều nganng
+khoảng cách giữa các phần tử là 20px*/
+.container-property2 {
+  width: 100%;
+  grid-column: 1/-1;
+  align-self: start; /* để bản thân container property 2 này ko phải dãn chiều dài ra khi 
+  mà container 1 nó tăng chiều cao (do sự kiện của nút view more do bàn chất thì nó đặt mặc định là align-items:stretch để dãn độ dài cho bằng nhau vì thế mà làm bất đối xứng
+  */
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+/* đường viền, chia theo dạng grid với 2 cột và 2 hàng
+,vị trí tương đối*/
+.container1 {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-columns: 70% 30%;
+  grid-template-rows: 1fr 3fr;
+  position: relative;
+}
+/*đường viền ,chia cột theo tỷ lệ ,vị trí tương đối ,chiều cao 120px*/
+.container-view {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-columns: 70% 30%;
+  position: relative;
+  height: 120px;
+}
+/*Hiệu ứng bóng đổ khi hover vào phần tử */
+.container-view:hover {
+  box-shadow: 0px -1px 5px rgba(0, 0, 0, 0.159);
+}
+/*đường viền , sử dụng grig layout,kích thước cột và dòng theo tỷ lệ,vị trí tương đối*/
+.container2 {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-columns: 70% 30%;
+  grid-template-rows: 1fr 2fr;
+  position: relative;
+}
+/*chiều rộng nội dung, căn theo theo trục dọc vào giữa
+căn theo trục ngang vào giữa ,kích thước chữ là 13px*/
+.title1 {
+  width: fit-content;
+  align-self: center;
+  justify-self: center;
+  font-size: 13px;
+}
+/* .head1 {
+  position: relative;
+} */
+.view-more {
+  /* position: absolute; */
+  display: none; /*ẩn phần tử */
+  padding: 5px; /*khoảng  cách padding là 5px*/
+  background-color: rgba(212, 212, 13, 0.373); /*màu nền */
+  width: fit-content; /*độ rộng theo nội dung*/
+  height: auto; /*chiều cao tự động*/
+  font-size: 9px; /*kích thước chữ là 9px*/
+  border-radius: 15px; /*dộ cong góc là 15px*/
+  box-shadow: 0px -1px 10px rgba(0, 0, 0, 0.159); /*hiệu ứng bóng đổ*/
+  margin-top: 5px; /*khoảng cách từ phía trên*/
+}
+
+/*hiển thị phần tử dưới dạng flẽbõ*/
+.container-view:hover .view-more {
+  display: flex;
+  align-items: center; /*cabư vị trí theo   trục dọc vào giữa*/
+  justify-content: center; /*căn bị trí theo trục ngang vào giữa*/
+  border: none; /*không có viền cho phần tử*/
+}
+.view-less {
+  /* position: absolute; */
+  /*hiển thị màu,độ rộng theo nội dung*/
+  background-color: rgba(212, 212, 13, 0.373); /*màu nền */
+  width: fit-content;
+  height: auto;
+  padding: 5px;
+  font-size: 9px;
+  border-radius: 15px;
+  box-shadow: 0px -1px 10px rgba(0, 0, 0, 0.159);
+  border: none;
+  margin-top: 5px;
+}
+/*chiều cao là 502px*/
+.height1 {
+  height: 502px;
+}
+/*chiều cao là 300px*/
+.height2 {
+  height: 300px;
+}
+/*font-size là 30px
+căn chỉnh chiều ngang theo vị trị đầu tiên
+căn chinh theo chiều dọc căn giữa
+dộ mờ 0.4*/
+.icon3 {
+  font-size: 30px;
+  justify-self: start;
+  align-self: center;
+  opacity: 0.4;
+}
+/*grid theo chiều dọc 1/3
+font-size 10px*/
+.content1 {
+  grid-column: 1/3;
+  font-size: 10px;
+}
+/*padding trái,phải,margin dưới 30px*/
+.list2 {
+  padding-left: 50px;
+  padding-right: 40px;
+  margin-bottom: 30px;
+}
+/*theo dạng inline-block
+margin trên là 3px 
+margin dưới là 5px*/
+.time {
+  display: inline-block;
+  margin-top: 3px;
+  margin-bottom: 5px;
+}
+/*định dạng inline-block
+màu nền 
+màu 
+độ rộng là 50px
+văn bản căn giữa,bo tròn đường cong góc*/
+.time-present {
+  display: inline-block;
+  background-color: rgba(0, 89, 255, 0.949);
+  color: #f7f7f7;
+  width: 50px;
+  text-align: center;
+  border-radius: 5px;
+}
+/*xác định vị trí tương đối*/
+.label {
+  position: relative;
+}
+/* Thêm phần tử giả vào sau thẻ label 
+màu nền phần tử giả
+định vị tuyệt đối
+độ rộng là 7px
+chiều cao là 7px,cách viền trên 3px,đặt viền dưới là 0
+cách viền trái -27
+độ cong góc 50% để tạo hình tròn*/
+.label::after {
+  content: "";
+  background-color: rgba(0, 140, 255, 0.949);
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  top: 3px;
+  bottom: 0;
+  left: -27px;
+  border-radius: 50%;
+}
+/*kích thước chữ là 10px
+độ mờ 0.6*/
+.content-small {
+  font-size: 10px;
+  opacity: 0.6;
+}
+
+/* Hobby */
+/*kích thước chữ là 15p
+định vị cột từ cột đầu đến cột cuối cùng trong gridx*/
+.content2 {
+  font-size: 15px;
+  grid-column: 1/-1;
+}
+.container-icon-hobby {
+  display: flex; /*sử dụng flexbox*/
+  height: 40px; /*chiều cao là 40px*/
+  align-items: center; /*căn lề đứng theo giữa*/
+  gap: 20px; /*khoảng cách giữa phần tử là 20px*/
+}
+.icon-hobby {
+  display: inline-block; /*hiển thị theo dạng khối*/
+  color: rgba(0, 140, 255, 0.949);
+  width: 35px; /*độ rộng là 35px*/
+  height: 35px; /*chiều cao là 35px*/
+  border: 1px solid rgba(0, 140, 255, 0.949); /*viền 1px với màu tương tự*/
+  border-radius: 100%; /*để tạo hình tròn*/
+  text-align: center; /*căn giữa nội dung theo chiều ngang*/
+  padding-top: 8px; /*khoảng cách padding từ phía trên*/
+}
+.icon-hobby:first-child {
+  /* Khoảng cách cách lề trái là 32px cho phần tử đầu tiên */
+  margin-left: 32px;
+}
+/* Kích thước chữ là 10px 
+Độ mờ 0.6
+Khoảng cách từ phía trên là 5px
+*/
+.text1 {
+  font-size: 10px;
+  opacity: 0.6;
+  margin-top: 5px;
+}
+.text-hobby {
+  margin-left: 10px; /* Khoảng cách từ lề trái là 10px */
+}
+.text-hobby:first-child {
+  /* Khoảng cách từ lề trái là 30px cho phần tử đầu tiên */
+}
+  margin-left: 30px;
+}
+.text-hobby:last-child {
+  /* Khoảng cách từ lề trái là 16px cho phần tử cuối cùng */
+}
+  margin-left: 16px;
+}
+/* LANGUAGE AND SKILL */
+/* Kích thước chữ là 10px 
+ Chiếm 1/3 cột trong grid 
+ Khoảng cách từ lề trái là 25px
+*/
+.content3 {
+  font-size: 10px;
+  grid-column: 1/3;
+  padding-left: 25px;
+}
+
+.border-blue {
+  /* Màu nền là #199cdb
+  Chiều cao là 2px 
+  khoảng cách từ phía phải là 10px
+  độ rộng là 45px
+    */
+  background: #199cdb;
+  display: inline-block;
+  height: 2px;
+  margin-right: 10px;
+  width: 45px;
+}
+.border {
+  background: #f7f7f7;/*màu nền là #f7f7f7*/
+  display: inline-block;/*hiển thị theo dạng khối*/
+  height: 2px;/*chiều cao là 2px*/
+  margin-right: 10px;/*khoảng cách từ phía phải là 10px*/
+  width: 45px;/*độ rộng là 45px*/
+}
+
+/* CERTIFICATE */
+.container3 {
+  height: auto;/*chiều cao tự dộng*/
+  display: grid;/*sử dụng grid layout*/
+  grid-template-columns: 1fr 1fr;/*chia layout  thành ư cột theo tỷ lệ 1：１*/
+  grid-template-rows: 1fr 3fr 4fr;/*chia layout thành 3 hàng với tỷ lệ khác nhau*/
+  justify-content: center;/*căn giữa theo chiều ngang*/
+  row-gap: 20px;/*khoảng cách giữa các hàng là 20px*/
+}
+.certificate-title {
+  /*kích thước chữ là 15px*/
+  font-size: 15px;
+/*chiếm 1/3 cột trong grid*/
+  grid-column: 1/3;
+  /*căn đối với đứng ở cuối*/
+  align-self: end;
+  /*sử dụng flexbox*/
+  display: flex;
+  /*50% chiều rộng của phần tử*/
+  width: 50%;
+  /*căn phần tử tới cuối cùng bên phải*/
+  justify-content: flex-end;
+}
+
+.certificate-image {
+  /*sử dụng flexbox*/
+  display: flex;
+}
+.certificate-image:nth-child(2) {
+/*dộ rộng theo nội dung*/
+  width: fit-content;
+  /*căn lề theo trục ngang và cuối*/
+  justify-self: end;
+  /* justify-content: end; */
+  /*viền dưới là 1px solid với màu #d6c08d*/
+  border-bottom: 1px solid #d6c08d;
+  padding-right: 15px;/*khoảng cách từ phải là 15px*/
+  position: relative;/*định vị tương đối */
+  padding-bottom: 25px;/*khoảng cách từ phía dưới là 25px*/
+  position: relative;/*định vị tương đối*/
+}
+
+.certificate-image:nth-child(2)::after {
+  /*thêm phần tử giả */
+  content: "";
+  position: absolute;/*định vị tuyệt đối*/
+  height: 80%;/*chiều cao là 80%*/
+  width: 0.5px;/*độ rộng 0.5px*/
+  background-color: #d6c08d;/*màu nền là #d6c08d*/
+  right: 0px;/*cách lê phải là 0px*/
+}
+
+.certificate-image:nth-child(3) {
+  /* Độ rộng theo nội dung */
+  width: fit-content;
+  margin-left: 0; /* Khoảng cách từ lề trái là 0 */
+  border-bottom: 1px solid #d6c08d; /* Viền dưới 1px solid với màu #d6c08d */
+  padding-left: 15px;/* Khoảng cách từ lề trái là 15px */
+}
+.certificate-image:last-child {
+  width: fit-content;/* độ rộng của nội dung */
+  justify-self: end;/*căn lề theo trục ngang vào cuối*/
+  grid-column: 1/2;/* chiếm 1/2 cột trong grid */
+  margin-bottom: 0;/* khoảng cách từ phía dưới là 0 */
+}
+.img-certificate {
+  /* Độ rộng là 170px */
+  width: 170px;
+  /* chiều  cao là 85px */
+  height: 85px;
+  /* khoảng cách từ phía phải là 15px */
+  margin-right: 15px;
+}
+
+.detail1 {
+  /* kích thước chữ là 12px */
+  font-size: 12px;
+  /* khoảng cách từ phía dưới là 10px */
+  padding-bottom: 10px;
+}
+.detail2 {
+  font-size: 12px;/* kích thước chữ là 12px*/
+  opacity: 0.6;/* Độ mờ là 0.6 */
+}
+
+/* PROJECT */
+.container4 {
+  height: auto;/* chiều cao tự động */
+  margin-top: 40px;/* khoảng cách từ phía trên là 40px*/
+}
+.DUAN {
+  /* khoảng cách từ lề trái là 280px*/
+  margin-left: 280px;
+  /* khoảng cách từ lề dưới là 20px*/
+  margin-bottom: 20px;
+}
+.project-container {
+  height: auto;/*chiều cao tự động */
+  display: grid;/* sử dụng grid layout */
+  grid-template-columns: repeat(3, 20%);/* chia layout 3 cột với tỷ lệ 20%*/
+  justify-content: center;/* căn giữa theo chiều ngang */
+  align-items: stretch;/* căn đối theo chiều dọc */
+  column-gap: 15px;/* khoảng cách giữa các cột là  15px */
+  font-size: 12px;/* kích thước chữ là 12*/
+}
+.project {
+  height: 100%;/*chiều cao 100%*/
+  display: grid;/*sử dụng grid layout*/
+}
+.img-project {
+  width: 100%;/*dộ rộng là 100%*/
+  height: 100%;/*chiều cao là 100%*/
+
+  background-size: cover; /* Ảnh nền sẽ được kéo/đè lên để phủ trọn phần nền */
+}
+}
+/* .img1 {
+  background-image: url("/images/project_1.png");
+}
+.img2 {
+  background-image: url("/images/project_2.png");
+}
+.img3 {
+  background-image: url("/images/project_3.png");
+} */
+.title-project {
+  padding: 10px 0;/*khoảng cách 10px từ trên và dưới,0 là khoảng cách từ trái và phải*/
+  padding-left: 20px;/*khoảng cách 20px từ lề trái*/
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.decoration {
+  font-size: 10px;/*kích thước là 10px*/
+  opacity: 0.6;/*độ mờ 0.6*/
+  padding: 10px 0;/*khoảng cách 10px  từ trên và dưới*/
+  padding-left: 20px;/*khoảng cách 20px từ lề trái*/
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.time-project {
+  display: inline-block;/*hiển thị theo dạng block và nằm trên cùng một dòng*/
+  background-color: rgba(0, 89, 255, 0.949);
+  color: #f7f7f7;/*màu chư là #f7f7f7*/
+  padding: 5px 10px;/*khoảng cách  là 5px từ trên và dưới ,10px từ trái và phải*/
+  border-radius: 15px;/*bo tròn góc với bán kính 15px*/
+}
+.span-icon {
+  padding-left: 15px;/*khoảng cách 15px từ trái*/
+  padding-right: 5px;/*khoảng cách 5px từ phải*/
+}
+.icon-developer {
+   /* Hiển thị dạng block và nằm trên cùng một dòng */
+  display: inline-block;
+}
+table {
+   /* kích thước chữ 11px,độ mờ 0.6
+gộp các đường viền của các ô
+   */
+
+  font-size: 11px;
+  opacity: 0.6;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-collapse: collapse;
+}
+tr {
+  /*sử dụng grid layout*/
+  display: grid;
+  grid-template-columns: 1fr 3fr;/*chia thành 2 cột với tỷ lệ 1/3*/
+}
+td {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-left: 3px;/* Khoảng cách từ lề trái là 3px */
+  padding-top: 5px;/* Khoảng cách từ phía trên là 5px */
+  padding-bottom: 5px;/* Khoảng cách từ phía dưới là 5px */
+}
+tr:last-child > td {/* Ẩn viền dưới cho ô cuối cùng trong hàng cuối cùng */
+  border-bottom: none;
+}
+
+.unknown {
+  flex-shrink: 0; /* Không co giãn ô này */
+  flex-basis: 80px; /* Kích thước cơ bản khi co giãn */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+/* Viền dưới 1px solid với màu rgba(0, 0, 0, 0.1) */
+}
+.bor {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+/* Viền dưới 1px solid với màu rgba(0, 0, 0, 0.1) */
+}
+
+/* FOOTER */
+/*height: Độ cao của phần tử.
+display: Sử dụng flexbox để căn giữa nội dung.
+justify-content: Căn giữa theo chiều ngang.
+align-items: Căn giữa theo chiều dọc.*/
+.container5 {
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*font-size: Kích thước chữ.
+margin-bottom: Khoảng cách dưới.
+opacity: Độ mờ của nội dung */
+.list-footer {
+  font-size: 12px;
+  margin-bottom: 0;
+  opacity: 0.8;
+}
+/*display: Hiển thị inline-block.
+padding-right: Khoảng cách phía bên phải.*/
+.list-footer > li {
+  display: inline-block;
+  padding-right: 15px;
+}
+/*Màu chữ*/
+.icon-footer {
+  color: rgba(0, 89, 255, 0.949);
+}
+/*loại bỏ gạch chân dưới*/
+.link-footer {
+  text-decoration: none;
+}
+
+/* ADVANCED */
+/*định dạng vị trí tương đối*/
+.information {
+  position: relative;
+}
+/*hiển thị là inline-block
+định dạng vị trí tuyệt đối
+chiều rộng,vị trí đặt hình ảnh , đường viền , độ cong đưởng vièn*/
+.img-navbar {
+  display: inline-block;
+  position: absolute;
+  width: 130px;
+  top: -98px;
+  left: -65px;
+  border: 7px solid #f7f7f7;
+  border-radius: 100%;
+}

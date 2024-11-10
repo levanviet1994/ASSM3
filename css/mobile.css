@@ -1,0 +1,77 @@
+@media only screen and (max-width: 576px) {
+  /*ẩn lớp img-navbar*/
+  . .img-navbar {
+    display: none;
+  }
+
+  /*ẩn lớp nam-stack*/
+  .name-stack {
+    display: none;
+  }
+/*định dạng theo chiều dọc */
+  .nav-bar {
+    display: block;
+  }
+/*định dạng theo chiều dọc 
+độ rộng 100%*/
+  .link {
+    display: block;
+    width: 100%;
+  }
+/*chia theo grid-layout
+chuyển theo chiều dọc chiều cao tự dộng*/
+  .goal-information,
+  .information {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    flex-direction: column;
+    height: auto; /* Chuyển sang dạng chồng vào nhau */
+  }
+/*định dạng theo chiều dọc 
+*/
+  .property {
+    display: block;
+  }
+  /*định dạng theo chiều dọc 
+*/
+  .container-property1,
+  .container-property2 {
+    display: block;
+  }
+  /*định dạng theo chiều dọc 
+*/
+  .container3 {
+    display: block;
+  }
+  /*pađing bên phải 90px,đường viền dưới*/
+  .certificate-image:nth-child(2) {
+    padding-right: 90px;
+    border-bottom: 1px solid #d6c08d;
+  }
+/*pađing trái,đường viền dưới*/
+  .certificate-image:nth-child(3) {
+    padding-left: 6px;
+    border-bottom: 1px solid #d6c08d;
+    border-left: 0;
+  }
+/*pađing phải ,dường viền dưới */
+  .certificate-image:last-child {
+    padding-right: 90px;
+    border-bottom: 1px solid #d6c08d;
+    border-right: 0;
+  }
+/*định dạng theo grid layout*/
+  tr {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+  }/*định dạng theo chiều dọc 
+*/
+  .project-container {
+    display: block;
+  }
+/*margin trái,và bên dưới*/
+  .DUAN{
+   margin-left: 10px;
+    margin-bottom: 20px;
+}
